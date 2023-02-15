@@ -23,20 +23,20 @@
 
 function main() {
     //开始再这里编写代码了！！
-    toast("Hello World");
-    var name = readConfigString("name");
-    logd("姓名: " + name);
-    logd("年龄: " + readConfigString("age"));
-    logd("听音乐: " + readConfigString("music"));
-    logd("是不是一年级: " + readConfigString("one"));
-    logd("备注: " + readConfigString("mark"));
-    logd("jobTaskTag..." + readConfigString("jobTaskTag"));
-    //如果自动化服务正常
-    if (!autoServiceStart(3)) {
-        logd("自动化服务启动失败，无法执行脚本")
-        exit();
-        return;
-    }
+//    toast("Hello World");
+//    var name = readConfigString("name");
+//    logd("姓名: " + name);
+//    logd("年龄: " + readConfigString("age"));
+//    logd("听音乐: " + readConfigString("music"));
+//    logd("是不是一年级: " + readConfigString("one"));
+//    logd("备注: " + readConfigString("mark"));
+//    logd("jobTaskTag..." + readConfigString("jobTaskTag"));
+//    //如果自动化服务正常
+//    if (!autoServiceStart(3)) {
+//        logd("自动化服务启动失败，无法执行脚本")
+//        exit();
+//        return;
+//    }
     logd("开始执行脚本...")
     logd("见鬼了...")
 
@@ -45,15 +45,15 @@ function main() {
     var result = click(selector);
 
     sleep(1000);
-     获取选择器对象
-        选择 节点 clz=android.widget.CheckBox所有节点，
+//     获取选择器对象
+//        选择 节点 clz=android.widget.CheckBox所有节点，
     var node = clz("android.widget.ImageView").depth(18).getOneNodeInfo(10000);
     if (node) {
         node.click()
     } else {
       logd("无节点")
     }
-
+    sleep(2000);
     var node_cii = id("com.xingin.xhs:id/cii").getOneNodeInfo(10000);
     if (node_cii) {
         node_cii.click()
@@ -88,14 +88,15 @@ function main() {
         logd("无节点")
       }
        sleep(1000)
-//      var node_a4w = id("com.xingin.xhs:id/a4w").getOneNodeInfo(10000);
-//       if (node_a4w) {
-//            node_a4w.click()
-//       } else {
-//         logd("无节点")
-//       }
+       // 层级5
+      var node_a4w = id("com.xingin.xhs:id/a4w").getOneNodeInfo(10000);
+       if (node_a4w) {
+            node_a4w.click()
+       } else {
+         logd("无节点")
+       }
 
-
+       logd("操作完成")
 }
 
 function autoServiceStart(time) {
