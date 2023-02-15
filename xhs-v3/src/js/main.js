@@ -38,8 +38,64 @@ function main() {
         return;
     }
     logd("开始执行脚本...")
-    home();
     logd("见鬼了...")
+
+    var selector = id("com.xingin.xhs:id/ck8");
+    logd(selector)
+    var result = click(selector);
+
+    sleep(1000);
+     获取选择器对象
+        选择 节点 clz=android.widget.CheckBox所有节点，
+    var node = clz("android.widget.ImageView").depth(18).getOneNodeInfo(10000);
+    if (node) {
+        node.click()
+    } else {
+      logd("无节点")
+    }
+
+    var node_cii = id("com.xingin.xhs:id/cii").getOneNodeInfo(10000);
+    if (node_cii) {
+        node_cii.click()
+    } else {
+      logd("无节点")
+    }
+    sleep(1000)
+    var node_wx = id("com.xingin.xhs:id/wx").getOneNodeInfo(10000);
+    if (node_wx) {
+        node_wx.click()
+    } else {
+      logd("无节点")
+    }
+     sleep(1000)
+    var node_an0 = id("com.xingin.xhs:id/an0").getOneNodeInfo(10000);
+    if (node_an0) {
+        node_an0.click()
+    } else {
+      logd("无节点")
+    }
+     sleep(5000)
+    var node_b6e = id("com.xingin.xhs:id/b6e").getOneNodeInfo(10000);
+     if (node_b6e) {
+          node_b6e.inputText("今日心情语录")
+     } else {
+       logd("无节点")
+     }
+     var node_b55 = id("com.xingin.xhs:id/b55").getOneNodeInfo(10000);
+      if (node_b55) {
+           node_b55.inputText("舒畅的心情是自己给予的，不要天真地去奢望别人的赏赐。")
+      } else {
+        logd("无节点")
+      }
+       sleep(1000)
+//      var node_a4w = id("com.xingin.xhs:id/a4w").getOneNodeInfo(10000);
+//       if (node_a4w) {
+//            node_a4w.click()
+//       } else {
+//         logd("无节点")
+//       }
+
+
 }
 
 function autoServiceStart(time) {
